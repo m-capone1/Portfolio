@@ -12,14 +12,19 @@ export default {
         "white-100": "#f3f3f3",
         header: '#003366',
         background: '#0A0F2A',
-        accent: '#66A3FF',
+        accent: '#FFB9B8',
         middle: '#004080',
+        secondAccent: '#FFD492'
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
+        glow: '0 0 25px rgba(64, 224, 208, 0.8)',
       },
       screens: {
         xs: "350px",
+      },
+      scale: {
+        '105': '1.05',
       },
     },
   },

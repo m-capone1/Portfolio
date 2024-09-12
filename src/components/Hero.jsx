@@ -6,7 +6,7 @@ const Hero = () => {
     const [firstTyped, setFirstTyped] = useState(false);
 
     return (
-        <section className="flex flex-col justify-center items-center py-48 px-4 text-white-100 md:py-60">
+        <section className="flex flex-col justify-center items-center py-24 px-4 text-white-100 md:py-36">
             <h1 className="text-2xl md:text-4xl lg:text-6xl whitespace-pre"> 
                 <ReactTyped 
                     strings={["Hi! I'm "]} 

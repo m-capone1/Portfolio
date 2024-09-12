@@ -17,7 +17,7 @@ export default {
         secondAccent: '#FFD492'
       },
       boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+        card: "0px 35px 120px -15px #f3f3f3",
         glow: '0 0 25px rgba(64, 224, 208, 0.8)',
       },
       screens: {

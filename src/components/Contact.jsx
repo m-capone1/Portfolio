@@ -5,20 +5,20 @@ const Contact = () => {
             <h2 className="text-3xl text-secondAccent py-2">
                 Contact Me
             </h2>
-            <form className="flex flex-col text-white-100 gap-4 mb-4">
-                <div className="flex flex-col">
+            <form className="flex flex-col text-white-100 mx-4 mb-4 shadow-card">
+                <div className="flex flex-col p-4">
                     <label>Name</label>
-                    <input placeholder ="Your name" className="rounded-lg h-8 p-2 outline-none text-sm"></input>
+                    <input placeholder ="Your name" className="rounded-lg h-8 p-2 outline-none text-sm text-background"></input>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col p-4">
                     <label>Email</label>
-                    <input placeholder ="Your name" className="rounded-lg h-8 p-2 outline-none text-sm"></input>
+                    <input placeholder ="Your name" className="rounded-lg h-8 p-2 outline-none text-sm text-background"></input>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col p-4">
                     <label>Message</label>
-                    <textarea placeholder ="Your message :)" className="resize-none h-24 rounded-lg p-2 outline-none text-sm"></textarea>
+                    <textarea placeholder ="Your message :)" className="resize-none h-24 rounded-lg p-2 outline-none text-sm text-background"></textarea>
                 </div>
-                <button>
+                <button className="bg-middle w-1/5 rounded-lg h-8 m-4">
                     Send
                 </button>
             </form>

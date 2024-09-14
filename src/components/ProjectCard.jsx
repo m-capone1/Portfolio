@@ -1,5 +1,5 @@
 
-const ProjectCard = ({title, img, alt, description}) => {
+const ProjectCard = ({title, img, alt, description, techStack}) => {
     return (
         <section className="flex flex-col font-bold mt-6 mb-12 mx-4 text-white-100 rounded-md h-auto w-3/5flex shadow-card flex-col justify-center items-center">
             <h3 className="text-2xl px-4 py-4 lg:text-3xl">

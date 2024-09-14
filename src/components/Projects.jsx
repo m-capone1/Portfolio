@@ -49,30 +49,35 @@ const Projects = () => {
           img={hypertask} 
           alt="hypertask"
           description ="An AI powered project management tool that streamlines streamline repetitive tasks."
+          techStack = {["React", "JavaScript", "Node.js", "SCSS"]}
         />
         <ProjectCard 
           title={"Portfolio"} 
           img={hypertask} 
           alt="hypertask"
           description =""
+          techStack = {["React", "JavaScript", "Tailwind"]}
         />
         <ProjectCard 
           title={"Locally"} 
           img={hypertask} 
           alt="hypertask"
           description =""
+          techStack = {["React", "TypeScript"]}
         />
         <ProjectCard 
           title={"PriceSlueth"} 
           img={hypertask} 
           alt="hypertask"
           description =""
+          techStack = {["React", "TypeScript"]}
         />
         <ProjectCard 
           title={"Knee Strain Measurement"} 
           img={knee} 
           alt="knee strain measurement"
           description =""
+          techStack = {["C++", "", "", ""]}
         />
       </Carousel>;
     </section>

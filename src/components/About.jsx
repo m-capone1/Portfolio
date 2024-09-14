@@ -1,4 +1,4 @@
-import Card from '../components/ProjectCard';
+import Card from './ExCard';
 import model from '../assets/images/3d.png';
 import computer from '../assets/images/computer.png';
 import software from '../assets/images/devops.png';

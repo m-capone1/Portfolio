@@ -1,5 +1,19 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ProjectCard from '../components/ProjectCard';
+import hypertask from '../assets/images/hypertask.png';
+import knee from '../assets/images/knee.png';
+
+const CustomDot = ({ onClick, active }) => {
+    return (
+        <button
+        className={`w-3 h-3 rounded-full border-2 border-white 
+        ${active ? 'bg-secondAccent' : 'bg-transparent'} 
+        ${active ? 'border-blue-500' : 'border-gray-500'} mx-1`}
+        onClick={onClick}
+        />
+    );
+  };
 
 const Projects = () => {
 
@@ -7,12 +21,12 @@ const Projects = () => {
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
           items: 1,
-          slidesToSlide: 3
+          slidesToSlide: 1
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
           items: 1,
-          slidesToSlide: 2
+          slidesToSlide: 1
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
@@ -26,14 +40,16 @@ const Projects = () => {
             <h2 className="text-3xl text-secondAccent py-2">Projects</h2>
             <Carousel 
             responsive={responsive}
+            customDot={<CustomDot />} 
             showDots={true}
             removeArrowOnDeviceType={["tablet", "mobile"]}
             keyBoardControl={true}
-            itemClass="carousel-item-padding-100-px">
-                <div>Item 1</div>
-                <div>Item 2</div>
-                <div>Item 3</div>
-                <div>Item 4</div>
+            transitionDuration={500}>
+                <ProjectCard title={"HyperTask"} img={hypertask} alt="hypertask"/>
+                <ProjectCard title={"Portfolio"} img={hypertask} alt="hypertask"/>
+                <ProjectCard title={"Locally"} img={hypertask} alt="hypertask"/>
+                <ProjectCard title={"PriceSlueth"} img={hypertask} alt="hypertask"/>
+                <ProjectCard title={"Knee Strain Measurement"} img={knee} alt="knee strain measurement"/>
             </Carousel>;
         </section>
     );

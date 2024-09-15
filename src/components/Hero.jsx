@@ -5,7 +5,7 @@ import linkedin from '../assets/images/linkedin.png';
 import instagram from '../assets/images/instagram.png';
 import github from '../assets/images/github.png';
 
-const Hero = () => {
+const Hero = ({scrollToSection, contact}) => {
     const [firstTyped, setFirstTyped] = useState(false);
 
     return (
@@ -34,7 +34,7 @@ const Hero = () => {
                     )}
             </div>
             <img src={lightbulb} className='w-40 my-8 md:w-48 lg:w-60 drop-shadow-glow transition-transform duration-300 hover:scale-105'></img>
-            <button className='border-2 p-2 rounded-md text-secondAccent hover:bg-middle'>
+            <button onClick={() => scrollToSection(contact)} className='border-2 p-2 rounded-md text-secondAccent hover:bg-middle'>
                 Get in Touch
             </button>
             <div className="flex flex-row gap-4 mt-4">

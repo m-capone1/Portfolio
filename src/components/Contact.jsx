@@ -1,8 +1,8 @@
 
-const Contact = () => {
+const Contact = ({contact}) => {
     return (
         <section className="flex flex-col mx-6 md:mx-8 lg:mx-16 xl:mx-24">
-            <h2 className="text-3xl text-secondAccent py-2">
+            <h2 ref={contact} className="text-3xl text-secondAccent py-2">
                 Contact Me
             </h2>
             <form className="flex flex-col text-white-100 mx-4 mb-4 shadow-card">

@@ -15,7 +15,7 @@ const CustomDot = ({ onClick, active }) => {
   );
 };
 
-const Projects = () => {
+const Projects = ({projects}) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -36,7 +36,7 @@ const Projects = () => {
 
   return (
     <section className="flex flex-col mx-6 md:mx-8 lg:mx-16 xl:mx-24">
-      <h2 className="text-3xl text-secondAccent py-2">Projects</h2>
+      <h2 ref={projects} className="text-3xl text-secondAccent py-2">Projects</h2>
       <Carousel 
         responsive={responsive}
         customDot={<CustomDot />} 

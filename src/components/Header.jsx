@@ -1,6 +1,6 @@
 import pdf from '../assets/documents/resume.pdf';
 
-const Header = () => {
+const Header = ({scrollToSection, myStory, contact, projects}) => {
 
     const onResumeClick = () => {
         window.open(pdf);
@@ -8,17 +8,17 @@ const Header = () => {
 
     return (
         <header className="flex justify-end items-center gap-3 pt-4 mr-4 text-base font-medium md:text-lg lg:text:xl ">
-            <div className="cursor-pointer text-accent">
+            <div onClick={() => scrollToSection(myStory)} className="cursor-pointer text-accent">
                 My Story
             </div>
-            <div className="cursor-pointer text-accent">
+            <div onClick={() => scrollToSection(projects)} className="cursor-pointer text-accent">
                 Projects
+            </div>
+            <div onClick={() => scrollToSection(contact)} className="cursor-pointer text-accent">
+                Contact Me 
             </div>
             <div className="cursor-pointer text-accent">
                 Fun Stuff
-            </div>
-            <div className="cursor-pointer text-accent">
-                Contact Me 
             </div>
             <button onClick = {onResumeClick} className="cursor-pointer text-secondAccent px-2 py-1 ml-8 border-2 rounded-md hover:bg-middle">
                 Resume

@@ -38,9 +38,15 @@ const Hero = ({scrollToSection, contact}) => {
                 Get in Touch
             </button>
             <div className="flex flex-row gap-4 mt-4">
-                <img src={linkedin} alt="linkedin" className="w-8 h-auto"></img>
-                <img src={github} alt="github" className="w-8 h-auto"></img>
-                <img src={instagram} alt="instagram" className="w-8 h-auto"></img>
+                <a href="https://www.linkedin.com/in/madeline-capone/" target="_blank" rel="noopener noreferrer">
+                    <img src={linkedin} alt="linkedin" className="w-8 h-auto"></img>
+                </a>
+                <a href="https://github.com/m-capone1" target="_blank" rel="noopener noreferrer">
+                    <img src={github} alt="github" className="w-8 h-auto"></img>
+                </a>
+                <a href="https://www.instagram.com/maddycapone/" target="_blank" rel="noopener noreferrer">
+                    <img src={instagram} alt="instagram" className="w-8 h-auto"></img>
+                </a>
             </div>
         </section>
     );

@@ -1,8 +1,8 @@
 import Card from './ExCard';
-import model from '../assets/images/3d.png';
-import computer from '../assets/images/computer.png';
-import software from '../assets/images/devops.png';
-import wrench from '../assets/images/wrench.png';
+import model from '../assets/images/3d-white.png';
+import computer from '../assets/images/computer-white.png';
+import software from '../assets/images/devops-white.png';
+import wrench from '../assets/images/wrench-white.png';
 
 const About = ({myStory}) => {
     return (
@@ -12,11 +12,11 @@ const About = ({myStory}) => {
             </h2>
             <div className="text-m text-white-100">
                 <div className="py-2">
-                    My journey into programming began during a mandatory introductory C++ course that was required for my Mechanical Engineering degree. I didn’t expect much from it, since coding wasn’t something I thought would become important in my life or my career.
-                    I vividly remember feeling really frustratred that I couldn't solve one of the weekly programming projects. No matter how much time I spent on it, I couldn’t figure it out. It was frustrating me so much so that I seriously considered giving up. I was convinced that maybe programming just wasn’t for me.
+                    My journey into programming began during a mandatory introductory <strong className='text-secondAccent'>C++</strong> course that was required for my Mechanical Engineering degree. I didn’t expect much from it, since coding wasn’t something I thought would become important in my life or my career.
+                    I vividly <strong className='text-secondAccent'>remember feeling really frustratred </strong>that I couldn't solve one of the weekly programming projects. No matter how much time I spent on it, I couldn’t figure it out. It was frustrating me so much so that I seriously considered giving up. I was convinced that maybe programming just wasn’t for me.
                 </div>
                 <div className="py-2">
-                    When I finally cracked the probelm - something clicked for me. I think that first problem taught me a lot about perserverence, hard work, and the satisfaction that follows solving a complex problem. I then began to see programming differently. I found myself seeking out new challenges, excited by solving complex problems. 
+                <strong className='text-secondAccent'>When I finally cracked the problem - something clicked for me.</strong> I think that first problem taught me a lot about perserverence, hard work, and the satisfaction that follows solving a complex problem. I then began to see programming differently. I found myself seeking out new challenges, excited by solving complex problems. 
                     Programming quickly became more than just a requirement for my degree - it became a passion. I get a thrill from problem solving and I welcome new challenges. It motivates me to be a better engineer and to learn more each and every day.
                 </div>
                 <div className="py-2">

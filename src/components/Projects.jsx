@@ -3,6 +3,10 @@ import "react-multi-carousel/lib/styles.css";
 import ProjectCard from '../components/ProjectCard';
 import hypertask from '../assets/images/hypertask.png';
 import knee from '../assets/images/knee.png';
+import oneHealth from '../assets/images/onehealth.png';
+import portfolio from '../assets/images/portfolio.png';
+import hypertaskBoard from '../assets/images/hypertask-board.png';
+import hypertaskLogin from '../assets/images/hypertask-login.png';
 
 const CustomDot = ({ onClick, active }) => {
   return (
@@ -46,38 +50,38 @@ const Projects = ({projects}) => {
         transitionDuration={500}>
         <ProjectCard 
           title={"HyperTask"} 
-          img={hypertask} 
-          alt="hypertask"
+          img={[hypertask, hypertaskBoard, hypertaskLogin]} 
+          alt="Hypertask"
           description ="An AI powered project management tool that streamlines streamline repetitive tasks."
-          techStack = {["React", "JavaScript", "Node.js", "SCSS"]}
+          techStack = {["React", "JavaScript", "Node.js", "SCSS", "OpenAI API"]}
         />
         <ProjectCard 
           title={"Portfolio"} 
-          img={hypertask} 
-          alt="hypertask"
+          img={[portfolio]} 
+          alt="Portfolio"
           description =""
           techStack = {["React", "JavaScript", "Tailwind"]}
         />
         <ProjectCard 
-          title={"Locally"} 
-          img={hypertask} 
-          alt="hypertask"
+          title={"OneHealth"} 
+          img={[oneHealth]} 
+          alt="OneHealth"
           description =""
-          techStack = {["React", "TypeScript"]}
+          techStack = {["React", "JavaScript", "Open AI API"]}
         />
         <ProjectCard 
           title={"PriceSlueth"} 
-          img={hypertask} 
-          alt="hypertask"
+          img={[hypertask]} 
+          alt="PriceSlueth"
           description =""
           techStack = {["React", "TypeScript"]}
         />
         <ProjectCard 
           title={"Knee Strain Measurement"} 
-          img={knee} 
+          img={[knee]} 
           alt="knee strain measurement"
           description =""
-          techStack = {["C++", "", "", ""]}
+          techStack = {["C++", "3D Design", "Arduino", "Mechanical Engineering"]}
         />
       </Carousel>;
     </section>

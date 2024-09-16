@@ -33,7 +33,7 @@ const HomePage = () => {
         contact={contact}/>
       <About myStory= {myStory}/>
       <Projects projects={projects}/>
-      <FunStuff />
+      {/* <FunStuff /> */}
       <Contact contact={contact}/>
       <Footer />
     </section>

@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-Thanks for visiting my portfolio :) This website showcase's my personal projects, provides some details about my background, provides a link to my resume and social media, and offer a way to get in touch with me. The portfolio is built using React, JavaScript, and Tailwind CSS, focusing on a clean, modern design and responsive layout.
+Thanks for visiting my portfolio :) This website showcase's my personal projects, provides some details about my background, provides a link to my resume and social media, and offer a way to get in touch with me. The portfolio is built using React, JavaScript, and Tailwind CSS, focusing on a creative and modern design and responsive layout.
 
 ## Table of Contents 
 - [Demo](#demo)

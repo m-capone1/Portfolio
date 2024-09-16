@@ -17,10 +17,10 @@ const Header = ({scrollToSection, myStory, contact, projects}) => {
             <div onClick={() => scrollToSection(contact)} className="cursor-pointer text-accent">
                 Contact Me 
             </div>
-            <div className="cursor-pointer text-accent">
+            {/* <div className="cursor-pointer text-accent">
                 Fun Stuff
-            </div>
-            <button onClick = {onResumeClick} className="cursor-pointer text-secondAccent px-2 py-1 ml-8 border-2 rounded-md hover:bg-middle">
+            </div> */}
+            <button onClick = {onResumeClick} className="cursor-pointer text-secondAccent px-2 py-1 border-2 rounded-md hover:bg-middle">
                 Resume
             </button>
         </header>

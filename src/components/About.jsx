@@ -3,14 +3,25 @@ import model from '../assets/images/3d-white.png';
 import computer from '../assets/images/computer-white.png';
 import software from '../assets/images/devops-white.png';
 import wrench from '../assets/images/wrench-white.png';
+import { useState } from 'react';
 
 const About = ({myStory}) => {
+    const [readMore, setReadMore] = useState(false);
+
+    const openReadMore = () => {
+        setReadMore(prevState => !prevState);
+    }
+
     return (
         <section ref={myStory} className="flex flex-col mx-6 md:mx-8 lg:mx-16 xl:mx-24">
             <h2 className="text-3xl text-secondAccent py-2">
                 About 
             </h2>
-            <div className="text-m text-white-100">
+            <div className='text-lg text-white-100'>
+                blaugh bluah blugh stuff
+            </div>
+            <div onClick={openReadMore} className='cursor-pointer text-secondAccent text-sm hover:opacity-50'>Read More...</div>
+            {readMore && (<div className="text-m text-white-100">
                 <div className="py-2">
                     My journey into programming began during a mandatory introductory <strong className='text-secondAccent'>C++</strong> course that was required for my Mechanical Engineering degree. I didn’t expect much from it, since coding wasn’t something I thought would become important in my life or my career.
                     I vividly <strong className='text-secondAccent'>remember feeling really frustratred </strong>that I couldn't solve one of the weekly programming projects. No matter how much time I spent on it, I couldn’t figure it out. It was frustrating me so much so that I seriously considered giving up. I was convinced that maybe programming just wasn’t for me.
@@ -23,7 +34,7 @@ const About = ({myStory}) => {
                     Although I have a background and expertise in Mechanical Engineering, I use programming as a tool to streamline processes and it is my long-term goal to fully transition into the software engineering indistry. The constant learning process and problem solving required in programming motivates me to push the 
                     boundaries of what I can do. It’s no longer just about completing projects or fulfilling requirements; it’s about continuous improvement, both as an engineer and a learner. Embracing challenges, whether in tech or in life, has become part of who I am, and I can’t imagine a future without that thrill of discovery and growth.
                 </div>
-            </div>
+            </div>)}
             <div className='flex flex-row justify-around'>
                 <Card title = "Software Engineer" img = {software} alt="software-engineer"/>
                 <Card title = "Mechanical Engineer" img ={wrench} alt="mechanical-engineer"/>

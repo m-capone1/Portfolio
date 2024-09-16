@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 
-const ProjectCard = ({title, img, alt, description, techStack}) => {
+const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCaseStudy}) => {
     const [nextImg, setNextImg] = useState(img[0]);
 
     const onClickImg = () => {
@@ -18,7 +18,7 @@ const ProjectCard = ({title, img, alt, description, techStack}) => {
             <h3 className="text-2xl px-4 py-4 lg:text-3xl text-accent ">
                 {title}
             </h3>
-            <p className="px-4 pb-4 font-normal">{description}</p>
+            <p className="px-4 pb-4 font-thin">{description}</p>
             <img className="lg:w-3/4 cursor-pointer" onClick = {onClickImg} src= {nextImg} alt={alt}></img>
             <ul className="flex flex-row gap-4 font-thin text-secondAccent">
                 {
@@ -28,8 +28,8 @@ const ProjectCard = ({title, img, alt, description, techStack}) => {
                 }
             </ul>
             <section className="w-full flex flex-col items-start gap-2 p-4 text-accent lg:text-xl">
-                <button className="hover:underline">Visit Site</button>
-                <button className="hover:underline">View Case Study</button>
+                {isDeployed && (<button className="hover:underline">Visit Site</button>)}
+                {isCaseStudy && (<button className="hover:underline">View Case Study</button>)}
             </section>
         </section>
     )

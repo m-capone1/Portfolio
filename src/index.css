@@ -11,3 +11,9 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+.hero-background {
+    background-image: url('../assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+}

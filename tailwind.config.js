@@ -11,10 +11,10 @@ export default {
         "black-200": "#090325",
         "white-100": "#f3f3f3",
         header: '#003366',
-        background: '#0A0F2A',
-        accent: '#FFB9B8',
+        background: '#070029',
+        accent: '#D6A9F3',
         middle: '#004080',
-        secondAccent: '#FFD492'
+        secondAccent: '#FFFFFF'
       },
       boxShadow: {
         card: "0px 10px 40px -15px #004080",

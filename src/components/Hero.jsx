@@ -17,14 +17,14 @@ const Hero = ({scrollToSection, contact}) => {
                         typeSpeed={100}
                         showCursor={false}
                     />
-                        <ReactTyped 
-                            strings={["Maddy Capone "]} 
-                            typeSpeed={100}
-                            startDelay={900}
-                            cursorChar=">"
-                            onComplete={() => setFirstTyped(true)}
-                            className = 'pl-2 text-secondAccent'
-                        />
+                    <ReactTyped 
+                        strings={["Maddy Capone "]} 
+                        typeSpeed={100}
+                        startDelay={900}
+                        cursorChar=">"
+                        onComplete={() => setFirstTyped(true)}
+                        className = 'pl-2 text-secondAccent'
+                    />
                 </h1>
                 <div className="text-base mt-4 lg:text-2xl">
                     {firstTyped && (
@@ -34,8 +34,7 @@ const Hero = ({scrollToSection, contact}) => {
                         />
                         )}
                 </div>
-                {/* <img src={lightbulb} className='w-40 my-8 md:w-48 lg:w-60 drop-shadow-glow transition-transform duration-300 hover:scale-105'></img> */}
-                <button onClick={() => scrollToSection(contact)} className='border-2 p-2 rounded-md text-secondAccent mt-8 hover:bg-middle'>
+                <button onClick={() => scrollToSection(contact)} className='border-2 p-2 rounded-md text-secondAccent mt-8 hover:bg-accent'>
                     Get in Touch
                 </button>
                 <div className="flex flex-row gap-4 m-8">

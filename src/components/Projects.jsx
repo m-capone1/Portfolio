@@ -47,7 +47,8 @@ const Projects = ({projects}) => {
         showDots={true}
         removeArrowOnDeviceType={["tablet", "mobile"]}
         keyBoardControl={true}
-        transitionDuration={500}>
+        transitionDuration={500}
+        className="">
         <ProjectCard 
           title={"HyperTask"} 
           img={[hypertask, hypertaskBoard, hypertaskLogin]} 
@@ -71,7 +72,7 @@ const Projects = ({projects}) => {
         />
         <ProjectCard 
           title={"PriceSlueth"} 
-          img={[hypertask]} 
+          img={[]} 
           alt="PriceSlueth"
           description =""
           techStack = {["React", "TypeScript"]}

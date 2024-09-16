@@ -7,7 +7,7 @@ const Header = ({scrollToSection, myStory, contact, projects}) => {
     }
 
     return (
-        <header className="flex justify-end items-center gap-3 pt-4 mr-4 text-base font-medium md:text-lg lg:text:xl ">
+        <header className="flex justify-end z-10 bg-background w-full items-center gap-3 py-4 px-8 text-base font-medium md:text-lg lg:text:xl fixed">
             <div onClick={() => scrollToSection(myStory)} className="cursor-pointer text-accent">
                 My Story
             </div>

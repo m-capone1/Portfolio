@@ -5,14 +5,16 @@ const Contact = ({contact}) => {
             <h2 ref={contact} className="text-3xl text-secondAccent py-2">
                 Contact Me
             </h2>
-            <form className="flex flex-col text-white-100 mx-4 mb-4 shadow-card">
-                <div className="flex flex-col p-4">
-                    <label>Name</label>
-                    <input placeholder ="Your name" className="rounded-lg h-8 p-2 outline-none text-sm text-background"></input>
-                </div>
-                <div className="flex flex-col p-4">
-                    <label>Email</label>
-                    <input placeholder ="Your name" className="rounded-lg h-8 p-2 outline-none text-sm text-background"></input>
+            <form className="text-white-100 mx-4 mb-4 shadow-card">
+                <div className="flex flex-col lg:flex-row">
+                    <div className="flex flex-col p-4 w-full">
+                        <label>Name</label>
+                        <input placeholder ="Your name" className="rounded-lg h-8 p-2 outline-none text-sm text-background"></input>
+                    </div>
+                    <div className="flex flex-col p-4 w-full">
+                        <label>Email</label>
+                        <input placeholder ="Your name" className="rounded-lg h-8 p-2 outline-none text-sm text-background"></input>
+                    </div>
                 </div>
                 <div className="flex flex-col p-4">
                     <label>Message</label>

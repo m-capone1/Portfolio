@@ -6,8 +6,8 @@ import wrench from '../assets/images/wrench-white.png';
 
 const About = ({myStory}) => {
     return (
-        <section className="flex flex-col mx-6 md:mx-8 lg:mx-16 xl:mx-24">
-            <h2 ref={myStory} className="text-3xl text-secondAccent py-2">
+        <section ref={myStory} className="flex flex-col mx-6 md:mx-8 lg:mx-16 xl:mx-24">
+            <h2 className="text-3xl text-secondAccent py-2">
                 About 
             </h2>
             <div className="text-m text-white-100">

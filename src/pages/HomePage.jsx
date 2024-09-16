@@ -3,12 +3,10 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Projects from "../components/Projects";
-import FunStuff from "../components/FunStuff";
 import Contact from "../components/Contact";
 import Footer from '../components/Footer';
 
 const HomePage = () => {
-
   const myStory = useRef(null);
   const projects = useRef(null);
   const contact = useRef(null);
@@ -22,7 +20,7 @@ const HomePage = () => {
 
   return (
     <section className="bg-background">
-      <Header 
+      <Header
         scrollToSection={scrollToSection}
         myStory= {myStory}
         projects={projects}
@@ -33,7 +31,6 @@ const HomePage = () => {
         contact={contact}/>
       <About myStory= {myStory}/>
       <Projects projects={projects}/>
-      {/* <FunStuff /> */}
       <Contact contact={contact}/>
       <Footer />
     </section>

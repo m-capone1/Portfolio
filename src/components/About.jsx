@@ -20,11 +20,11 @@ const About = ({myStory}) => {
             <div className='text-lg text-white-100'>
                 blaugh bluah blugh stuff
             </div>
-            <div onClick={openReadMore} className='cursor-pointer text-secondAccent text-sm hover:opacity-50'>Read More...</div>
+            <div onClick={openReadMore} className='cursor-pointer text-accent text-sm hover:opacity-50'>Read more about my journey...</div>
             {readMore && (<div className="text-m text-white-100">
                 <div className="py-2">
                     My journey into programming began during a mandatory introductory <strong className='text-secondAccent'>C++</strong> course that was required for my Mechanical Engineering degree. I didn’t expect much from it, since coding wasn’t something I thought would become important in my life or my career.
-                    I vividly <strong className='text-secondAccent'>remember feeling really frustratred </strong>that I couldn't solve one of the weekly programming projects. No matter how much time I spent on it, I couldn’t figure it out. It was frustrating me so much so that I seriously considered giving up. I was convinced that maybe programming just wasn’t for me.
+                    I vividly remember feeling really frustratred that I couldn't solve one of the weekly programming projects. No matter how much time I spent on it, I couldn’t figure it out. It was frustrating me so much so that I seriously considered giving up. I was convinced that maybe programming just wasn’t for me.
                 </div>
                 <div className="py-2">
                 <strong className='text-secondAccent'>When I finally cracked the problem - something clicked for me.</strong> I think that first problem taught me a lot about perserverence, hard work, and the satisfaction that follows solving a complex problem. I then began to see programming differently. I found myself seeking out new challenges, excited by solving complex problems. 
@@ -35,11 +35,27 @@ const About = ({myStory}) => {
                     boundaries of what I can do. It’s no longer just about completing projects or fulfilling requirements; it’s about continuous improvement, both as an engineer and a learner. Embracing challenges, whether in tech or in life, has become part of who I am, and I can’t imagine a future without that thrill of discovery and growth.
                 </div>
             </div>)}
-            <div className='flex flex-row justify-around'>
-                <Card title = "Software Engineer" img = {software} alt="software-engineer"/>
-                <Card title = "Mechanical Engineer" img ={wrench} alt="mechanical-engineer"/>
-                <Card title = "3D Modelling" img ={model} alt="modeling"/>
-                <Card title = "Fullstack Development" img = {computer} alt="developer"/>
+            <div className='flex flex-col justify-center items-center md:flex-row md:justify-around'>
+                <Card 
+                    title = "Software Engineer" 
+                    img = {software} 
+                    alt="software-engineer"
+                />
+                <Card 
+                    title = "Mechanical Engineer" 
+                    img ={wrench} 
+                    alt="mechanical-engineer"
+                />
+                <Card 
+                    title = "3D Modelling" 
+                    img ={model} 
+                    alt="modeling"
+                />
+                <Card 
+                    title = "Fullstack Development" 
+                    img = {computer} 
+                    alt="developer"
+                />
             </div>
         </section>
     )

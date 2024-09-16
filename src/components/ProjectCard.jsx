@@ -23,7 +23,7 @@ const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCas
             <ul className="flex flex-row flex-wrap justify-center mx-4 gap-4 font-thin text-secondAccent">
                 {
                     techStack.map((tech, index) => (
-                    <li key={index} className="bg-middle px-4 py-2 mt-4 rounded-3xl hover:bg-header">{tech}</li>
+                    <li key={index} className="bg-middle px-4 py-2 mt-4 rounded-3xl hover:bg-accent">{tech}</li>
                     ))
                 }
             </ul>

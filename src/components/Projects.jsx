@@ -76,13 +76,6 @@ const Projects = ({projects}) => {
           isDeployed= {false}
           isCaseStudy={true}
         />
-        {/* <ProjectCard 
-          title={"PriceSlueth"} 
-          img={[]} 
-          alt="PriceSlueth"
-          description =""
-          techStack = {["React", "TypeScript", "NestJS"]}
-        /> */}
         <ProjectCard 
           title={"3D-Printed Knee Brace with Strain Detection"} 
           img={[knee]} 

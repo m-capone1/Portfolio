@@ -14,16 +14,19 @@ const About = ({myStory}) => {
 
     return (
         <section ref={myStory} className="flex flex-col mx-6 md:mx-8 lg:mx-16 xl:mx-24">
-            <h2 className="text-3xl text-secondAccent py-2">
-                About 
+            <h2 className="text-3xl text-secondAccent py-4 md:pt-12">
+                My Story 
             </h2>
             <div className='text-lg text-white-100'>
-                blaugh bluah blugh stuff
+               Thanks for stopping by! I'm a software developer with two years of experience working with Python and two years of self-taught JavaScript. I recently completed a software development bootcamp at BrainStation where I sharpened my fullstack tehcnical skills like HTML, CSS, JavaScript, React,Node.js/Express, and MySQL. I love being challenged and I consider myself a liffelong learner, and I can't wait to continue to learn more and more about programming each day!
             </div>
-            <div onClick={openReadMore} className='cursor-pointer text-accent text-sm hover:opacity-50'>Read more about my journey...</div>
-            {readMore && (<div className="text-m text-white-100">
+            <div className='text-lg text-white-100 mt-4'>
+                If you'd like to hear more about my transition from Mechanical Engineering to Software Engineering, feel free to continue reading below.
+            </div>
+            <div onClick={openReadMore} className='cursor-pointer text-accent text-sm hover:opacity-50 py-4'>Click to read more about my journey...</div>
+            {readMore && (<div className="text-lg text-white-100">
                 <div className="py-2">
-                    My journey into programming began during a mandatory introductory <strong className='text-secondAccent'>C++</strong> course that was required for my Mechanical Engineering degree. I didn’t expect much from it, since coding wasn’t something I thought would become important in my life or my career.
+                    My journey into programming began during a mandatory introductory C++course that was required for my Mechanical Engineering degree. I didn’t expect much from it, since coding wasn’t something I thought would become important in my life or my career.
                     I vividly remember feeling really frustratred that I couldn't solve one of the weekly programming projects. No matter how much time I spent on it, I couldn’t figure it out. It was frustrating me so much so that I seriously considered giving up. I was convinced that maybe programming just wasn’t for me.
                 </div>
                 <div className="py-2">

@@ -11,7 +11,7 @@ const Hero = ({scrollToSection, contact}) => {
     return (
         <section style={{backgroundImage: `url(${background})`, backgroundSize:'cover', backgroundPosition:'center'}}>
             <section className="flex flex-col justify-center items-center pt-24 pb-12 px-4 text-white-100 md:pt-32 md:pb-16">
-                <h1 className="text-2xl mt-32 md:text-4xl lg:text-6xl whitespace-pre"> 
+                <h1 className="text-2xl mt-32 sm:text-3xl md:text-4xl lg:text-6xl whitespace-pre"> 
                     <ReactTyped
                         strings={["Hi! I'm "]}
                         typeSpeed={100}

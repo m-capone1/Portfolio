@@ -22,9 +22,10 @@ const Contact = ({contact}) => {
         const templateID = 'template_hdcxybt';
 
         const templateParams = {
-            name: formData.name,
-            email: formData.email,
+            from_name: formData.from_name,
+            to_name: 'Maddy',
             message: formData.message,
+            from_email: formData.email,
         };
       
         emailjs.send(serviceID, templateID, templateParams)

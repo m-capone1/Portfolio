@@ -14,11 +14,11 @@ const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCod
     }
 
     const onClickSite = () => {
-        location.href = linkSite;
+        window.open(linkSite, '_blank');
     }
 
     const onClickCode = () => {
-        location.href = linkCode;
+        window.open(linkCode, '_blank');
     }
 
     return (

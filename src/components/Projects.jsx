@@ -55,8 +55,9 @@ const Projects = ({projects}) => {
           description="HyperTask is an AI-powered tool designed to streamline project management workflow processes. It uses AI to automate the card creation process, making task management more efficient by suggesting tasks based on project goals. Additionally, HyperTask offers real-time project insights, personalized project recommendations, and summaries to help users make decisions and track project progress. For data visualization, HyperTask uses Chart.js to provide users with charts and graphs, offering visual representations of project metrics and performance."
           techStack = {["React", "JavaScript", "SCSS", "Node.js", "MySQL", "Chart.js", "OpenAI API"]}
           isDeployed= {true}
-          isCaseStudy={false}
-          link="https://hyper-task.vercel.app"
+          isCode={true}
+          linkSite="https://hyper-task.vercel.app"
+          linkCode="https://github.com/m-capone1/HyperTask.git"
         />
         <ProjectCard 
           title={"Portfolio"} 
@@ -65,8 +66,9 @@ const Projects = ({projects}) => {
           description ="I created my portfolio website to introduce myself and the projects I have built so far on my software engineering journey. The portfolio highlights my skills, creative projects, and the technologies I have worked with. The website provides details of each project I have completed, and a link to the site if it has been deployed. If no site has been deployed, I have provided a case study of the application detailing the process and learning outcomes."
           techStack = {["React", "JavaScript", "Tailwind"]}
           isDeployed= {true}
-          isCaseStudy={false}
-          link="www.madelinecapone.ca"
+          isCode={true}
+          linkSite="http://www.madelinecapone.ca"
+          linkCode="https://github.com/m-capone1/Portfolio.git"
         />
         <ProjectCard 
           title={"OneHealth"} 
@@ -75,8 +77,9 @@ const Projects = ({projects}) => {
           description="OneHealth is a health application developed during a 24-hour hackathon in partnership with Microsoft, designed to address a problem space that Microsoft is facing: the lack of trust in AI among Canadians. Through extensive research, the team decided that building trust in AI can be achieved by presenting it in a way that is both educational and useful to Canadian users. The overall goal of OneHealth is to empower Canadians by providing them with easy access to their own medical records. When users view their records, the AI offers clear explanations of what they are seeing. This feature aims to enhance user understanding, reduce confusion around complex medical information, and gain Canadian trust in AI’s role in healthcare."
           techStack= {["React", "JavaScript", "Open AI API"]}
           isDeployed= {false}
-          isCaseStudy={true}
-          link="/OneHealth"
+          isCode={true}
+          linkSite=""
+          linkCode="https://github.com/m-capone1/OneHealth.git"
         />
         <ProjectCard 
           title={"3D-Printed Knee Brace with Strain Detection"} 
@@ -85,8 +88,9 @@ const Projects = ({projects}) => {
           description ="This project combines software, mechanical, and electrical engineering to create a 3D-printed knee brace designed to assess ligament strain to determine if a patient's knee requires further medical intervention. The knee brace is equipped with strech resistance sensors capable of detecting the strain on the lateral and medial ligaments of the knee. I programmed the Arduino Nano using C++ to process real-time strain data from the sensors. The brace's structure was designed using SolidWorks and then 3D-printed. Testing was conducted with the device under different scenarios and data was collected to be analyzed. "
           techStack = {["C++", "3D Design", "Arduino", "SolidWorks"]}
           isDeployed= {false}
-          isCaseStudy={true}
-          link="/KneeStrain"
+          isCode={true}
+          linkSite=""
+          linkCode="https://www.upwork.com/freelancers/~01bcd5143a6b59b915?p=1520925573338427392"
         />
       </Carousel>;
     </section>

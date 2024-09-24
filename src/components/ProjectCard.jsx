@@ -1,6 +1,6 @@
 import { useState} from "react";
 
-const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCaseStudy, link}) => {
+const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCode, linkSite, linkCode}) => {
     const [nextImg, setNextImg] = useState(img[0]);
 
     const onClickImg = () => {
@@ -11,6 +11,14 @@ const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCas
         } else {
             setNextImg(img[indexOfCurrentImg + 1]);
         }
+    }
+
+    const onClickSite = () => {
+        location.href = linkSite;
+    }
+
+    const onClickCode = () => {
+        location.href = linkCode;
     }
 
     return (
@@ -28,8 +36,8 @@ const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCas
                 }
             </ul>
             <section className="w-full flex flex-col items-start gap-2 p-4 text-accent lg:text-xl">
-                {isDeployed && (<button className="hover:underline">Visit Site</button>)}
-                {isCaseStudy && (<button className="hover:underline">See More</button>)}
+                {isDeployed && (<button onClick={onClickSite} className="hover:underline">Visit Site</button>)}
+                {isCode && (<button onClick={onClickCode} className="hover:underline">See More</button>)}
             </section>
         </section>
     )

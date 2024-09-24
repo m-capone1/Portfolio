@@ -1,16 +1,16 @@
 import { useState } from "react";
-import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser';
 
-const Contact = ({contact}) => {
+const Contact = ({ contact }) => {
     const [formData, setFormData] = useState({
-        name: '',
+        from_name: '',
         email: '',
         message: ''
     });
 
     const handleChange = (e) => {
         setFormData({
-            ...formData, 
+            ...formData,
             [e.target.name]: e.target.value
         });
     }
@@ -25,19 +25,19 @@ const Contact = ({contact}) => {
             from_name: formData.from_name,
             to_name: 'Maddy',
             message: formData.message,
-            from_email: formData.email,
+            email: formData.email
         };
-      
-        emailjs.send(serviceID, templateID, templateParams)
-        .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Message sent successfully!');
-            setFormData({ name: '', email: '', message: '' });
-        })
-        .catch((error) => {
-            console.error('FAILED...', error);
-            alert('Failed to send message.');
-        });
+
+        emailjs.send(serviceID, templateID, templateParams, 'fbjHwKB6xUefr7i6t')
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Message sent successfully!');
+                setFormData({ from_name: '', email: '', message: '' })
+            })
+            .catch((error) => {
+                console.error('FAILED...', error);
+                alert('Failed to send message.');
+            });
     }
     
     return (
@@ -51,10 +51,10 @@ const Contact = ({contact}) => {
                         <label>Name</label>
                         <input 
                             type="text"
-                            name="name"
+                            name="from_name"
                             placeholder="Your name"
                             className="rounded-lg h-8 p-2 outline-none text-sm text-background"
-                            value={formData.name}
+                            value={formData.from_name}
                             onChange={handleChange}
                             required
                         />

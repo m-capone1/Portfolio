@@ -47,8 +47,7 @@ const Projects = ({projects}) => {
         showDots={true}
         removeArrowOnDeviceType={["tablet", "mobile"]}
         keyBoardControl={true}
-        transitionDuration={500}
-        className="">
+        transitionDuration={500}>
         <ProjectCard 
           title={"HyperTask"} 
           img={[hypertask, hypertaskBoard, hypertaskLogin]} 
@@ -57,7 +56,7 @@ const Projects = ({projects}) => {
           techStack = {["React", "JavaScript", "SCSS", "Node.js", "MySQL", "Chart.js", "OpenAI API"]}
           isDeployed= {true}
           isCaseStudy={false}
-          link="http://www.hyper-task.vercel.app"
+          link="https://hyper-task.vercel.app"
         />
         <ProjectCard 
           title={"Portfolio"} 

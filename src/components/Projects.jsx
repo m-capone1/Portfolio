@@ -57,6 +57,7 @@ const Projects = ({projects}) => {
           techStack = {["React", "JavaScript", "SCSS", "Node.js", "MySQL", "Chart.js", "OpenAI API"]}
           isDeployed= {true}
           isCaseStudy={false}
+          link="http://www.hyper-task.vercel.app"
         />
         <ProjectCard 
           title={"Portfolio"} 
@@ -66,6 +67,7 @@ const Projects = ({projects}) => {
           techStack = {["React", "JavaScript", "Tailwind"]}
           isDeployed= {true}
           isCaseStudy={false}
+          link="www.madelinecapone.ca"
         />
         <ProjectCard 
           title={"OneHealth"} 
@@ -75,6 +77,7 @@ const Projects = ({projects}) => {
           techStack= {["React", "JavaScript", "Open AI API"]}
           isDeployed= {false}
           isCaseStudy={true}
+          link="/OneHealth"
         />
         <ProjectCard 
           title={"3D-Printed Knee Brace with Strain Detection"} 
@@ -84,6 +87,7 @@ const Projects = ({projects}) => {
           techStack = {["C++", "3D Design", "Arduino", "SolidWorks"]}
           isDeployed= {false}
           isCaseStudy={true}
+          link="/KneeStrain"
         />
       </Carousel>;
     </section>

@@ -1,6 +1,6 @@
 import { useState} from "react";
 
-const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCaseStudy}) => {
+const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCaseStudy, link}) => {
     const [nextImg, setNextImg] = useState(img[0]);
 
     const onClickImg = () => {
@@ -29,7 +29,7 @@ const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCas
             </ul>
             <section className="w-full flex flex-col items-start gap-2 p-4 text-accent lg:text-xl">
                 {isDeployed && (<button className="hover:underline">Visit Site</button>)}
-                {isCaseStudy && (<button className="hover:underline">View Case Study</button>)}
+                {isCaseStudy && (<button className="hover:underline">See More</button>)}
             </section>
         </section>
     )

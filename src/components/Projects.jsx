@@ -7,6 +7,8 @@ import oneHealth from '../assets/images/onehealth.png';
 import portfolio from '../assets/images/portfolio.png';
 import hypertaskBoard from '../assets/images/hypertask-board.png';
 import hypertaskLogin from '../assets/images/hypertask-login.png';
+import riopelleVeer from '../assets/images/riopelle-veer.png';
+import riopelleVeer2 from '../assets/images/riopelle-veer-2.png';
 
 const CustomDot = ({ onClick, active }) => {
   return (
@@ -50,7 +52,7 @@ const Projects = ({projects}) => {
         transitionDuration={500}>
         <ProjectCard 
           title={"Riopelle-Veer Realty"} 
-          img={[]} 
+          img={[riopelleVeer, riopelleVeer2]} 
           alt="Riopelle-Veer"
           description="WORK IN PROGRESS - Riopelle-Veer Realty is a a local realty website using JavaScript, Next.js, and Tailwind CSS as my main tech stack. This project is an ongoing redesign aimed at bringing the client's vision to life by creating a modern, user-friendly interface that aligns with their design goals. The site will enhance the overall user experience while maintaining responsiveness and seamless navigation across all devices. As this project is still a work in progress, you can follow along with its development on my GitHub to see how it evolves."
           techStack = {["Next.js", "JavaScript", "Tailwind"]}

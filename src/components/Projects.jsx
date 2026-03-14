@@ -3,7 +3,6 @@ import "react-multi-carousel/lib/styles.css";
 import ProjectCard from '../components/ProjectCard';
 import hypertask from '../assets/images/hypertask.png';
 import knee from '../assets/images/knee.png';
-import oneHealth from '../assets/images/onehealth.png';
 import hypertaskBoard from '../assets/images/hypertask-board.png';
 import hypertaskLogin from '../assets/images/hypertask-login.png';
 import riopelleVeer from '../assets/images/riopelle-veer.png';
@@ -79,17 +78,6 @@ const Projects = ({ projects }) => {
                     isCode={true}
                     linkSite="https://hyper-task.vercel.app"
                     linkCode="https://github.com/m-capone1/HyperTask.git"
-                />
-                <ProjectCard
-                    title={"OneHealth"}
-                    img={[oneHealth]}
-                    alt="OneHealth"
-                    description="OneHealth is a health application developed during a 24-hour hackathon in partnership with Microsoft, designed to address a lack of trust in AI among Canadians. The team built a platform that empowers Canadians by providing easy access to their own medical records, with AI offering clear explanations of what they are seeing — reducing confusion around complex medical information."
-                    techStack={["React", "JavaScript", "Open AI API"]}
-                    isDeployed={false}
-                    isCode={true}
-                    linkSite=""
-                    linkCode="https://github.com/m-capone1/OneHealth.git"
                 />
                 <ProjectCard
                     title={"3D-Printed Knee Brace with Strain Detection"}

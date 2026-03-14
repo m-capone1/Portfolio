@@ -9,6 +9,8 @@ import hypertaskBoard from '../assets/images/hypertask-board.png';
 import hypertaskLogin from '../assets/images/hypertask-login.png';
 import riopelleVeer from '../assets/images/riopelle-veer.png';
 import riopelleVeer2 from '../assets/images/riopelle-veer-2.png';
+import morningRiotHome from '../assets/images/morning-riot-home.png';
+import morningRiotShop from '../assets/images/morning-riot-shop.png';
 
 const CustomDot = ({ onClick, active }) => {
     return (
@@ -19,7 +21,7 @@ const CustomDot = ({ onClick, active }) => {
     );
 };
 
-const morningRiotImgs = ['/morning-riot-home.png', '/morning-riot-shop.png'];
+const morningRiotImgs = [morningRiotHome, morningRiotShop];
 
 const Projects = ({ projects }) => {
     const responsive = {
@@ -49,12 +51,13 @@ const Projects = ({ projects }) => {
                     title={"Morning Riot"}
                     img={morningRiotImgs}
                     alt="Morning Riot"
-                    description="Morning Riot is a custom e-commerce backend built for a coffee roasting business — essentially a Shopify from scratch. It handles product catalog, order management, Stripe payments, and transactional email via Resend. Built with NestJS and PostgreSQL, the REST API includes modules for products, orders, payments, and users, with admin-protected endpoints and a full Stripe Payment Intents + Webhooks flow with real-time stock validation."
+                    description="Morning Riot is a custom e-commerce backend built for a coffee roasting business, essentially a Shopify from scratch. It handles product catalog, order management, Stripe payments, and transactional email via Resend. Built with NestJS and PostgreSQL, the REST API includes modules for products, orders, payments, and users, with admin-protected endpoints and a full Stripe Payment Intents and Webhooks flow with real-time stock validation."
                     techStack={["NestJS", "TypeScript", "PostgreSQL", "Stripe", "Docker", "Resend"]}
-                    isDeployed={true}
+                    isDeployed={false}
                     isCode={true}
-                    linkSite="https://www.morningriot.ca"
-                    linkCode="https://github.com/m-capone1/morning-riot"
+                    linkSite=""
+                    linkCode="https://www.morningriot.ca"
+                    codeLabel="See Product"
                 />
                 <ProjectCard
                     title={"Riopelle-Veer Realty"}

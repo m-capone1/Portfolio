@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ProjectCard = ({ title, img, alt, description, techStack, isDeployed, isCode, linkSite, linkCode }) => {
+const ProjectCard = ({ title, img, alt, description, techStack, isDeployed, isCode, linkSite, linkCode, codeLabel = "See Code" }) => {
     const [nextImg, setNextImg] = useState(img[0]);
 
     const onClickImg = () => {
@@ -52,7 +52,7 @@ const ProjectCard = ({ title, img, alt, description, techStack, isDeployed, isCo
                         onClick={onClickCode}
                         className="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-colors"
                     >
-                        See Code →
+                            {codeLabel} →
                     </button>
                 )}
             </div>

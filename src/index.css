@@ -66,3 +66,27 @@ body {
     bottom: 0;
     gap: 4px;
 }
+
+.pearlescent-btn {
+    background: linear-gradient(120deg, #00BFFF 0%, #FF00FF 50%, #00e4ff 100%);
+    background-size: 200% 200%;
+    box-shadow: 0 4px 20px rgba(0, 191, 255, 0.25), inset 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+.holographic-text {
+    background: linear-gradient(to right, #ffffff, #FF00FF, #00BFFF, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+}
+
+.glow-input {
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.08);
+    transition: all 0.4s ease;
+}
+
+.glow-input:focus-within {
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.25);
+    border-color: rgba(0, 191, 255, 0.4) !important;
+}

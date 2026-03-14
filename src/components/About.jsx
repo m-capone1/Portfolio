@@ -9,7 +9,7 @@ const About = ({ myStory }) => {
     const [readMore, setReadMore] = useState(false);
 
     return (
-        <section ref={myStory} className="relative max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-24 py-24 border-t border-white/5">
+        <section ref={myStory} className="relative max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-24 pt-10 pb-24 border-t border-white/5">
             <div className="flex flex-col gap-4 mb-10">
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">
                     My <span className="text-primary neon-glow">Story</span>
@@ -18,10 +18,10 @@ const About = ({ myStory }) => {
             </div>
 
             <div className="text-lg text-slate-400 leading-relaxed max-w-3xl">
-                Thanks for stopping by! I'm a software developer with two years of experience working with Python and two years of self-taught JavaScript. I recently completed a software development boot camp at BrainStation where I sharpened my Full-Stack technical skills like HTML, CSS, JavaScript, React, Node.js/Express, and MySQL. I love being challenged and I consider myself a lifelong learner, and I can't wait to continue to learn more and more about programming each day!
+                Thanks for stopping by! I'm a software developer with two years of professional experience building and shipping software with TypeScript, PHP, AWS, Jenkins, and Git. I'm driven by growth and I'm always looking to level up my skills, take on new challenges, and bring ideas to life from start to finish.
             </div>
             <div className="text-lg text-slate-400 mt-4 leading-relaxed max-w-3xl">
-                If you'd like to hear more about my transition from Mechanical Engineering to Software Engineering, please continue reading below.
+                Outside of work, personal projects are where I push my boundaries. If you'd like to hear more about how I got here, keep reading below.
             </div>
 
             <button

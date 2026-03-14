@@ -9,9 +9,11 @@ const Contact = ({ contact }) => {
         email: '',
         message: ''
     });
+    const [status, setStatus] = useState(null); // { type: 'success' | 'error', message: string }
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+        if (status) setStatus(null);
     }
 
     const handleSubmit = (e) => {
@@ -28,14 +30,13 @@ const Contact = ({ contact }) => {
         };
 
         emailjs.send(serviceID, templateID, templateParams, 'fbjHwKB6xUefr7i6t')
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Message sent successfully!');
+            .then(() => {
+                setStatus({ type: 'success', message: 'Message sent! I\'ll get back to you soon.' });
                 setFormData({ from_name: '', email: '', message: '' });
             })
             .catch((error) => {
-                console.error('FAILED...', error);
-                alert('Failed to send message.');
+                const msg = error?.text || error?.message || 'Something went wrong. Please try again.';
+                setStatus({ type: 'error', message: msg });
             });
     }
 
@@ -136,6 +137,11 @@ const Contact = ({ contact }) => {
                             required
                         />
                     </div>
+                    {status && (
+                        <p className={`text-sm font-medium tracking-wide ${status.type === 'success' ? 'text-primary' : 'text-red-400'}`}>
+                            {status.message}
+                        </p>
+                    )}
                     <button
                         type="submit"
                         className="mt-2 h-14 bg-primary text-background-dark font-black text-xs uppercase tracking-[0.3em] rounded-2xl hover:brightness-110 active:scale-[0.98] transition-all shadow-primary-glow"

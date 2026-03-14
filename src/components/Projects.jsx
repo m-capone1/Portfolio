@@ -4,7 +4,6 @@ import ProjectCard from '../components/ProjectCard';
 import hypertask from '../assets/images/hypertask.png';
 import knee from '../assets/images/knee.png';
 import oneHealth from '../assets/images/onehealth.png';
-import portfolio from '../assets/images/portfolio.png';
 import hypertaskBoard from '../assets/images/hypertask-board.png';
 import hypertaskLogin from '../assets/images/hypertask-login.png';
 import riopelleVeer from '../assets/images/riopelle-veer.png';
@@ -80,17 +79,6 @@ const Projects = ({ projects }) => {
                     isCode={true}
                     linkSite="https://hyper-task.vercel.app"
                     linkCode="https://github.com/m-capone1/HyperTask.git"
-                />
-                <ProjectCard
-                    title={"Portfolio"}
-                    img={[portfolio]}
-                    alt="Portfolio"
-                    description="I created my portfolio website to introduce myself and the projects I have built on my software engineering journey. The portfolio highlights my skills, creative projects, and the technologies I have worked with. It provides details of each project and a link to the site if deployed, or a case study detailing the process and learning outcomes."
-                    techStack={["React", "JavaScript", "Tailwind"]}
-                    isDeployed={true}
-                    isCode={true}
-                    linkSite="http://www.madelinecapone.ca"
-                    linkCode="https://github.com/m-capone1/Portfolio.git"
                 />
                 <ProjectCard
                     title={"OneHealth"}

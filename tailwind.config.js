@@ -4,25 +4,25 @@ export default {
   theme: {
     extend: {
       colors: {
+        "primary": "#00BFFF",
+        "accent-pink": "#FF00FF",
+        "accent-lavender": "#E6E6FA",
+        "background-dark": "#0B0B0D",
+        "surface-dark": "#1A1A1D",
         "white-100": "#f3f3f3",
-        header: '#003366',
-        background: '#070029',
-        accent: '#D6A9F3',
-        middle: '#B388EB',
-        secondAccent: '#FFFFFF'
+      },
+      fontFamily: {
+        display: ["Space Grotesk", "sans-serif"],
       },
       boxShadow: {
-        card: "0px 10px 40px -15px #004080",
-        glow: '0 0 25px rgba(64, 224, 208, 0.8)',
+        card: "0 10px 30px rgba(0, 0, 0, 0.5)",
+        "primary-glow": "0 0 15px rgba(0, 191, 255, 0.4)",
+        "pink-glow": "0 0 15px rgba(255, 0, 255, 0.4)",
       },
       screens: {
         xs: "350px",
-      },
-      scale: {
-        '105': '1.05',
       },
     },
   },
   plugins: [],
 }
-

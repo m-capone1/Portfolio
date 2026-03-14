@@ -1,30 +1,44 @@
 import pdf from '../assets/documents/resume.pdf';
 
 const Header = ({ scrollToSection, myStory, contact, projects }) => {
-
     const onResumeClick = () => {
         window.open(pdf);
     }
 
     return (
-        <header className='flex flex-row'>
-            <div className="flex justify-end z-10 bg-background w-full items-center gap-3 py-4 px-8 font-medium fixed">
-                <div className="hidden sm:flex gap-3">
-                    <div onClick={() => scrollToSection(myStory)} className="cursor-pointer text-accent text-md md:text-lg lg:text-xl hover:text-middle">
+        <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-6">
+            <div className="glass-nav rounded-full px-8 py-3 flex items-center justify-between">
+                <span className="font-display font-bold tracking-widest text-lg uppercase text-primary neon-glow">
+                    MC
+                </span>
+                <div className="hidden sm:flex items-center gap-8">
+                    <span
+                        onClick={() => scrollToSection(myStory)}
+                        className="cursor-pointer text-sm font-medium text-slate-300 hover:text-primary transition-colors uppercase tracking-wider"
+                    >
                         My Story
-                    </div>
-                    <div onClick={() => scrollToSection(projects)} className="cursor-pointer text-accent text-md md:text-lg lg:text-xl hover:text-middle">
+                    </span>
+                    <span
+                        onClick={() => scrollToSection(projects)}
+                        className="cursor-pointer text-sm font-medium text-slate-300 hover:text-primary transition-colors uppercase tracking-wider"
+                    >
                         Projects
-                    </div>
-                    <div onClick={() => scrollToSection(contact)} className="cursor-pointer text-accent text-md md:text-lg lg:text-xl hover:text-middle">
-                        Contact Me
-                    </div>
+                    </span>
+                    <span
+                        onClick={() => scrollToSection(contact)}
+                        className="cursor-pointer text-sm font-medium text-slate-300 hover:text-primary transition-colors uppercase tracking-wider"
+                    >
+                        Contact
+                    </span>
                 </div>
-                <button onClick={onResumeClick} className="cursor-pointer text-secondAccent px-2 py-1 border-2 rounded-md hover:bg-middle">
+                <button
+                    onClick={onResumeClick}
+                    className="bg-primary text-background-dark px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:brightness-110 transition-all shadow-primary-glow"
+                >
                     Resume
                 </button>
             </div>
-        </header>
+        </nav>
     );
 }
 

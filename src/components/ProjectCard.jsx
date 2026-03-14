@@ -1,46 +1,63 @@
-import { useState} from "react";
+import { useState } from "react";
 
-const ProjectCard = ({title, img, alt, description, techStack, isDeployed, isCode, linkSite, linkCode}) => {
+const ProjectCard = ({ title, img, alt, description, techStack, isDeployed, isCode, linkSite, linkCode }) => {
     const [nextImg, setNextImg] = useState(img[0]);
 
     const onClickImg = () => {
-        let indexOfCurrentImg = img.indexOf(nextImg);
-
-        if(indexOfCurrentImg >= img.length-1 ) {
-            setNextImg(img[0]);
-        } else {
-            setNextImg(img[indexOfCurrentImg + 1]);
-        }
+        const index = img.indexOf(nextImg);
+        setNextImg(index >= img.length - 1 ? img[0] : img[index + 1]);
     }
 
-    const onClickSite = () => {
-        window.open(linkSite, '_blank');
-    }
-
-    const onClickCode = () => {
-        window.open(linkCode, '_blank');
-    }
+    const onClickSite = () => window.open(linkSite, '_blank');
+    const onClickCode = () => window.open(linkCode, '_blank');
 
     return (
-        <section className="flex flex-col font-semibold mt-6 mb-12 mx-4 text-white-100 rounded-md h-auto flex shadow-card flex-col justify-center items-center">
-            <h3 className="text-2xl px-4 py-4 lg:text-3xl text-accent ">
-                {title}
-            </h3>
-            <p className="px-4 pb-4 font-thin">{description}</p>
-            <img className="lg:w-3/4 cursor-pointer" onClick = {onClickImg} src= {nextImg} alt={alt}></img>
-            <ul className="flex flex-row flex-wrap justify-center mx-4 gap-4 font-thin text-secondAccent">
-                {
-                    techStack.map((tech, index) => (
-                    <li key={index} className="bg-middle px-4 py-2 mt-4 rounded-3xl hover:bg-accent">{tech}</li>
-                    ))
-                }
-            </ul>
-            <section className="w-full flex flex-col items-start gap-2 p-4 text-accent lg:text-xl">
-                {isDeployed && (<button onClick={onClickSite} className="hover:underline">Visit Site</button>)}
-                {isCode && (<button onClick={onClickCode} className="hover:underline">See More</button>)}
-            </section>
+        <section className="floating-card gradient-glow rounded-xl p-6 md:p-8 flex flex-col gap-6 mx-4 mb-12">
+            <h3 className="text-2xl font-bold tracking-tight text-white">{title}</h3>
+
+            <p className="text-slate-400 text-sm leading-relaxed font-light">{description}</p>
+
+            <img
+                className="rounded-lg cursor-pointer lg:w-3/4 mx-auto hover:opacity-90 transition-opacity"
+                onClick={onClickImg}
+                src={nextImg}
+                alt={alt}
+            />
+            {img.length > 1 && (
+                <p className="text-xs text-slate-500 text-center -mt-4 uppercase tracking-widest">Click image to cycle screenshots</p>
+            )}
+
+            <div className="flex flex-wrap gap-2">
+                {techStack.map((tech, index) => (
+                    <span
+                        key={index}
+                        className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-primary/20"
+                    >
+                        {tech}
+                    </span>
+                ))}
+            </div>
+
+            <div className="flex gap-6">
+                {isDeployed && (
+                    <button
+                        onClick={onClickSite}
+                        className="text-xs font-bold uppercase tracking-widest text-primary hover:opacity-70 transition-opacity"
+                    >
+                        Visit Site →
+                    </button>
+                )}
+                {isCode && (
+                    <button
+                        onClick={onClickCode}
+                        className="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-colors"
+                    >
+                        See Code →
+                    </button>
+                )}
+            </div>
         </section>
-    )
+    );
 }
 
 export default ProjectCard;

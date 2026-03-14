@@ -19,7 +19,7 @@ const HomePage = () => {
   };
 
   return (
-    <section className="bg-background">
+    <section className="bg-background-dark">
       <Header
         scrollToSection={scrollToSection}
         myStory= {myStory}

@@ -1,6 +1,7 @@
 import pdf from '../assets/documents/resume.pdf';
+import logo from '../assets/logo/logo.png';
 
-const Header = ({ scrollToSection, myStory, contact, projects }) => {
+const Header = ({ scrollToSection, myStory, skills, contact, projects }) => {
     const onResumeClick = () => {
         window.open(pdf);
     }
@@ -8,15 +9,19 @@ const Header = ({ scrollToSection, myStory, contact, projects }) => {
     return (
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-6">
             <div className="glass-nav rounded-full px-8 py-3 flex items-center justify-between">
-                <span className="font-display font-bold tracking-widest text-lg uppercase text-primary neon-glow">
-                    MC
-                </span>
+                <img src={logo} alt="MC logo" className="h-8 w-auto" />
                 <div className="hidden sm:flex items-center gap-8">
                     <span
                         onClick={() => scrollToSection(myStory)}
                         className="cursor-pointer text-sm font-medium text-slate-300 hover:text-primary transition-colors uppercase tracking-wider"
                     >
                         My Story
+                    </span>
+                    <span
+                        onClick={() => scrollToSection(skills)}
+                        className="cursor-pointer text-sm font-medium text-slate-300 hover:text-primary transition-colors uppercase tracking-wider"
+                    >
+                        Skills
                     </span>
                     <span
                         onClick={() => scrollToSection(projects)}

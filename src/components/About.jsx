@@ -1,8 +1,8 @@
 import Card from './ExCard';
-import model from '../assets/images/3d-white.png';
 import computer from '../assets/images/computer-white.png';
 import software from '../assets/images/devops-white.png';
 import wrench from '../assets/images/wrench-white.png';
+import coffee from '../assets/images/coffee-white.svg';
 import { useState } from 'react';
 
 const About = ({ myStory }) => {
@@ -47,9 +47,9 @@ const About = ({ myStory }) => {
 
             <div className="flex flex-wrap gap-6 mt-12">
                 <Card title="Software Engineer" img={software} alt="software-engineer" />
-                <Card title="Mechanical Engineer" img={wrench} alt="mechanical-engineer" />
-                <Card title="3D Modelling" img={model} alt="modeling" />
-                <Card title="Fullstack Dev" img={computer} alt="developer" />
+                <Card title="Frontend" img={computer} alt="frontend" />
+                <Card title="Backend" img={wrench} alt="backend" />
+                <Card title="Entrepreneur" img={coffee} alt="entrepreneur" />
             </div>
         </section>
     );

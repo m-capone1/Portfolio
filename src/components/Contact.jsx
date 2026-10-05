@@ -68,9 +68,9 @@ const Contact = ({ contact }) => {
                         Say <span className="holographic-text pr-2">Hello</span>
                     </h2>
                     <div className="flex items-center justify-center gap-3 mt-5">
-                        <div className="h-px w-8 bg-gradient-to-r from-transparent to-primary/40"></div>
+                        <div className="h-px w-8 bg-linear-to-r from-transparent to-primary/40"></div>
                         <p className="text-primary/70 text-[10px] font-bold tracking-[0.25em] uppercase">Open for collaborations</p>
-                        <div className="h-px w-8 bg-gradient-to-l from-transparent to-primary/40"></div>
+                        <div className="h-px w-8 bg-linear-to-l from-transparent to-primary/40"></div>
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@ const Contact = ({ contact }) => {
                             className="pearlescent-btn flex items-center justify-between group px-6 py-4 rounded-2xl transition-all duration-300 hover:brightness-110 active:scale-[0.97]"
                         >
                             <div className="flex items-center gap-4">
-                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/40">
+                                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 backdrop-blur-xs border border-white/40">
                                     <img src={icon} alt={alt} className="w-5 h-auto" />
                                 </div>
                                 <span className="text-background-dark text-base font-bold tracking-tight">{label}</span>
@@ -103,35 +103,35 @@ const Contact = ({ contact }) => {
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <div className="glow-input flex-1 border border-primary/10 rounded-2xl bg-white/[0.03] overflow-hidden">
+                        <div className="glow-input flex-1 border border-primary/10 rounded-2xl bg-white/3 overflow-hidden">
                             <input
                                 type="text"
                                 name="from_name"
                                 placeholder="Name"
-                                className="bg-transparent w-full text-white px-5 py-4 outline-none placeholder:text-primary/50 tracking-wider text-sm font-medium"
+                                className="bg-transparent w-full text-white px-5 py-4 outline-hidden placeholder:text-primary/50 tracking-wider text-sm font-medium"
                                 value={formData.from_name}
                                 onChange={handleChange}
                                 required
                             />
                         </div>
-                        <div className="glow-input flex-1 border border-primary/10 rounded-2xl bg-white/[0.03] overflow-hidden">
+                        <div className="glow-input flex-1 border border-primary/10 rounded-2xl bg-white/3 overflow-hidden">
                             <input
                                 type="email"
                                 name="email"
                                 placeholder="Email"
-                                className="bg-transparent w-full text-white px-5 py-4 outline-none placeholder:text-primary/50 tracking-wider text-sm font-medium"
+                                className="bg-transparent w-full text-white px-5 py-4 outline-hidden placeholder:text-primary/50 tracking-wider text-sm font-medium"
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
                             />
                         </div>
                     </div>
-                    <div className="glow-input border border-primary/10 rounded-2xl bg-white/[0.03] overflow-hidden">
+                    <div className="glow-input border border-primary/10 rounded-2xl bg-white/3 overflow-hidden">
                         <textarea
                             name="message"
                             placeholder="Type your message here..."
                             rows="5"
-                            className="bg-transparent w-full text-white px-5 py-4 outline-none placeholder:text-primary/50 tracking-wider text-sm font-medium resize-none"
+                            className="bg-transparent w-full text-white px-5 py-4 outline-hidden placeholder:text-primary/50 tracking-wider text-sm font-medium resize-none"
                             value={formData.message}
                             onChange={handleChange}
                             required

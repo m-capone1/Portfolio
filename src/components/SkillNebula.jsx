@@ -164,9 +164,9 @@ const SkillNebula = ({ skillsRef }) => {
             <div ref={containerRef} className="relative w-full aspect-square max-w-lg mx-auto my-8">
                 {/* Decorative constellation rays */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
-                    <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent absolute rotate-45" />
-                    <div className="w-full h-px bg-gradient-to-r from-transparent via-accent-pink/30 to-transparent absolute -rotate-45" />
-                    <div className="w-3/4 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent absolute rotate-90" />
+                    <div className="w-full h-px bg-linear-to-r from-transparent via-primary/40 to-transparent absolute rotate-45" />
+                    <div className="w-full h-px bg-linear-to-r from-transparent via-accent-pink/30 to-transparent absolute -rotate-45" />
+                    <div className="w-3/4 h-px bg-linear-to-r from-transparent via-primary/30 to-transparent absolute rotate-90" />
                 </div>
 
                 {/* Ambient glow blobs */}

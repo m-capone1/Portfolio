@@ -36,7 +36,7 @@ const Hero = ({ scrollToSection, contact }) => {
                     </span>
                 </h1>
 
-                <div className="text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed font-light min-h-[2rem]">
+                <div className="text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed font-light min-h-8">
                     {firstTyped && (
                         <ReactTyped
                             strings={["I turn ideas into deployed products, from design to the last line of code."]}

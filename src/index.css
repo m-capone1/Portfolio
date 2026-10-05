@@ -1,100 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Space Grotesk", sans-serif;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+@theme {
+  --color-primary: #00bfff;
+  --color-accent-pink: #ff00ff;
+  --color-accent-lavender: #e6e6fa;
+  --color-background-dark: #0b0b0d;
+  --color-surface-dark: #1a1a1d;
+  --color-white-100: #f3f3f3;
+
+  --font-display: Space Grotesk, sans-serif;
+
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-primary-glow: 0 0 15px rgba(0, 191, 255, 0.4);
+  --shadow-pink-glow: 0 0 15px rgba(255, 0, 255, 0.4);
+
+  --breakpoint-xs: 350px;
 }
 
-body {
-    background-color: #0B0B0D;
-    color: #FFFFFF;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 }
 
-.glass-nav {
-    background: rgba(26, 26, 29, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Space Grotesk", sans-serif;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #0B0B0D;
+        color: #FFFFFF;
+    }
 }
 
-.neon-glow {
-    text-shadow: 0 0 10px rgba(0, 191, 255, 0.5), 0 0 20px rgba(0, 191, 255, 0.3);
-}
+@layer components {
+    .glass-nav {
+        background: rgba(26, 26, 29, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-.pink-glow {
-    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3);
-}
+    .neon-glow {
+        text-shadow: 0 0 10px rgba(0, 191, 255, 0.5), 0 0 20px rgba(0, 191, 255, 0.3);
+    }
 
-.floating-card {
-    background: #1A1A1D;
-    box-shadow: inset 0 0 20px rgba(0, 191, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
+    .pink-glow {
+        text-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3);
+    }
 
-.gradient-glow {
-    position: relative;
-}
+    .floating-card {
+        background: #1A1A1D;
+        box-shadow: inset 0 0 20px rgba(0, 191, 255, 0.05), 0 10px 30px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
 
-.gradient-glow::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    background: linear-gradient(135deg, #00BFFF, #FF00FF);
-    border-radius: inherit;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
+    .gradient-glow {
+        position: relative;
+    }
 
-.gradient-glow:hover::before {
-    opacity: 0.25;
-}
+    .gradient-glow::before {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        background: linear-gradient(135deg, #00BFFF, #FF00FF);
+        border-radius: inherit;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
 
-/* Override react-multi-carousel arrow styles */
-.react-multi-carousel-list {
-    padding-bottom: 2.5rem;
-}
+    .gradient-glow:hover::before {
+        opacity: 0.25;
+    }
 
-.react-multi-carousel-dot-list {
-    bottom: 0;
-    gap: 4px;
-}
+    /* Override react-multi-carousel arrow styles */
+    .react-multi-carousel-list {
+        padding-bottom: 2.5rem;
+    }
 
-.pearlescent-btn {
-    background: linear-gradient(120deg, #00BFFF 0%, #FF00FF 50%, #00e4ff 100%);
-    background-size: 200% 200%;
-    box-shadow: 0 4px 20px rgba(0, 191, 255, 0.25), inset 0 0 10px rgba(255, 255, 255, 0.15);
-}
+    .react-multi-carousel-dot-list {
+        bottom: 0;
+        gap: 4px;
+    }
 
-.holographic-text {
-    background: linear-gradient(to right, #ffffff, #FF00FF, #00BFFF, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-size: 200% auto;
-}
+    .pearlescent-btn {
+        background: linear-gradient(120deg, #00BFFF 0%, #FF00FF 50%, #00e4ff 100%);
+        background-size: 200% 200%;
+        box-shadow: 0 4px 20px rgba(0, 191, 255, 0.25), inset 0 0 10px rgba(255, 255, 255, 0.15);
+    }
 
-.glow-input {
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.08);
-    transition: all 0.4s ease;
-}
+    .holographic-text {
+        background: linear-gradient(to right, #ffffff, #FF00FF, #00BFFF, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        background-size: 200% auto;
+    }
 
-.glow-input:focus-within {
-    box-shadow: 0 0 25px rgba(0, 191, 255, 0.25);
-    border-color: rgba(0, 191, 255, 0.4) !important;
-}
+    .glow-input {
+        box-shadow: 0 0 15px rgba(0, 191, 255, 0.08);
+        transition: all 0.4s ease;
+    }
 
-.glass-panel {
-    background: rgba(26, 26, 29, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 191, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    .glow-input:focus-within {
+        box-shadow: 0 0 25px rgba(0, 191, 255, 0.25);
+        border-color: rgba(0, 191, 255, 0.4) !important;
+    }
+
+    .glass-panel {
+        background: rgba(26, 26, 29, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 191, 255, 0.15);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    }
 }
